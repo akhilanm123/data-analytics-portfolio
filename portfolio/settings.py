@@ -87,12 +87,16 @@ USE_TZ = True
 STATIC_URL = '/static/'
 
 STATICFILES_DIRS = [
-    BASE_DIR / "portfolio_app" / "static",  # ✅ Correct way
+    BASE_DIR / "portfolio_app" / "static",
 ]
 
-STATIC_ROOT = BASE_DIR / "staticfiles"  # Used when running `collectstatic`
-# For testing: Print emails to the console instead of sending
-EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+STATIC_ROOT = BASE_DIR / "staticfiles"
+
+# Enable proper static file handling in production
+if not DEBUG:
+    STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
+
+
 
 
 
