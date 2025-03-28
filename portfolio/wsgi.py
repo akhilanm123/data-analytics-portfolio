@@ -15,5 +15,5 @@ os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'portfolio.settings')
 
 application = get_wsgi_application()
 application = WhiteNoise(application)  # Add WhiteNoise for static files
-Remove-Item -Recurse -Force staticfiles\*
+
 
