@@ -7,7 +7,7 @@ SECRET_KEY = os.getenv('DJANGO_SECRET_KEY', 'your-default-secret-key')
 
 DEBUG = False  # Change to False for deployment
 
-ALLOWED_HOSTS = ['https://data-analytics-portfolio-rjif.onrender.com/']
+ALLOWED_HOSTS = ['data-analytics-portfolio-rjif.onrender.com']
 
 INSTALLED_APPS = [
     'django.contrib.admin',
