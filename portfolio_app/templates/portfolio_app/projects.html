@@ -1,0 +1,241 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects</title>
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+    <style>
+        body {
+            background: linear-gradient(to right, #eef2f3, #8e9eab);
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .navbar {
+            background-color: black;
+            padding: 15px 0;
+            text-align: center;
+        }
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 20px;
+            display: inline-block;
+            font-weight: bold;
+            transition: background 0.3s ease;
+        }
+        .navbar a:hover {
+            background-color: #0056b3;
+            border-radius: 5px;
+        }
+
+        .center-title {
+            text-align: center;
+            font-size: 36px;
+            color: #333;
+            margin: 20px 0;
+        }
+
+        .projects-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            padding: 20px;
+            justify-content: center;
+        }
+
+        .project-box {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .project-box:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 10px 15px;
+            margin-top: 10px;
+            color: white;
+            background-color: #007bff;
+            border-radius: 5px;
+            text-decoration: none;
+            transition: background 0.3s ease;
+        }
+        .btn:hover {
+            background: #0056b3;
+        }
+
+        .project-box h3::before {
+            content: "📊 ";
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <a href="/">Home</a>
+        <a href="/about">About</a>
+        <a href="/skills">Skills</a>
+        <a href="/contact">Contact</a>
+    </div>
+
+       <h1 class="center-title">My Projects</h1>
+    <div class="projects-container">
+        <div class="project-box">
+
+                <h3>Sales Insights (SQL & Power BI)</h3>
+
+                <p>Analyzed sales data using SQL queries and created an interactive Power BI dashboard.</p>
+
+                <a href="https://github.com/akhilanm123/Sales-Insights-SQL-And-PowerBI" class="btn" target="_blank">View Project</a>
+
+            </div>
+
+            <div class="project-box">
+
+                <h3>Customer Insights (RFM - PostgreSQL & Power BI)</h3>
+
+                <p>Performed RFM analysis using PostgreSQL and visualized insights in Power BI.</p>
+
+                <a href="https://github.com/akhilanm123/Customer-Insights-RFM-PostgreSQL-PowerBI" class="btn" target="_blank">View Project</a>
+
+            </div>
+
+            <div class="project-box">
+
+                <h3>Hospital Analytics (SQL)</h3>
+
+                <p>Developed a SQL-based hospital analytics database for tracking patient records and appointments.</p>
+
+                <a href="https://github.com/akhilanm123/Hospital-Analytics---SQL" class="btn" target="_blank">View Project</a>
+
+            </div>
+
+            <div class="project-box">
+
+                <h3>Credit Card Customer Transaction Report (SQL & Power BI)</h3>
+
+                <p>Designed a Power BI dashboard to analyze credit card transactions using SQL queries.</p>
+
+                <a href="https://github.com/akhilanm123/Credit-Card-Customer-Transaction-Report-SQL-And-PowerBI" class="btn" target="_blank">View Project</a>
+
+            </div>
+
+            <div class="project-box">
+
+                <h3>Diversity & Inclusion HR Analytics (Power BI)</h3>
+
+                <p>Investigated HR diversity metrics and built a Power BI report to highlight trends.</p>
+
+                <a href="https://github.com/akhilanm123/Diversity-And-Inclusion-HR-Analytics-Uisng-PowerBI" class="btn" target="_blank">View Project</a>
+
+            </div>
+
+            <div class="project-box">
+
+                <h3>HR Analytics (Power BI)</h3>
+
+                <p>Developed HR analytics dashboards to track employee performance and trends.</p>
+
+                <a href="https://github.com/akhilanm123/HR-Analytics---PowerBI" class="btn" target="_blank">View Project</a>
+
+            </div>
+
+            <div class="project-box">
+
+                <h3>SuperStore Sales Dashboard & Forecasting (Power BI)</h3>
+
+                <p>Built a forecasting model for SuperStore sales using Power BI.</p>
+
+                <a href="https://github.com/akhilanm123/SuperStore-Sales-Dashboard-Forecasting" class="btn" target="_blank">View Project</a>
+
+            </div>
+
+            <div class="project-box">
+
+                <h3>Hospitality Analytics Dashboard (Power BI)</h3>
+
+                <p>Created a Power BI dashboard analyzing hospitality industry trends.</p>
+
+                <a href="https://github.com/akhilanm123/-Hospitality-Analytics-Dashboard" class="btn" target="_blank">View Project</a>
+
+            </div>
+
+            <div class="project-box">
+
+                <h3>E-commerce Sales Dashboard (Tableau)</h3>
+
+                <p>Developed a Tableau dashboard to track e-commerce sales performance.</p>
+
+                <a href="https://github.com/akhilanm123/E-commerce-Sales-Dashboard-Tableau-Public-Project" class="btn" target="_blank">View Project</a>
+
+            </div>
+
+            <div class="project-box">
+
+                <h3>British Airways Review Dashboard (Tableau)</h3>
+
+                <p>Analyzed passenger reviews and built a Tableau dashboard for insights.</p>
+
+                <a href="https://github.com/akhilanm123/British-Airways-Review-Dashboard-Unveiling-Passenger-Insights-Service-Trends" class="btn" target="_blank">View Project</a>
+
+            </div>
+
+            <div class="project-box">
+
+                <h3>Personal Finance Dashboard (Power BI)</h3>
+
+                <p>Created a personal finance tracker using Power BI.</p>
+
+                <a href="https://github.com/akhilanm123/Personal-Finance-Dashboard-Power-Bi" class="btn" target="_blank">View Project</a>
+
+            </div>
+
+            <div class="project-box">
+
+                <h3>Bank Loan Analysis (Excel)</h3>
+
+                <p>Analyzed bank loan data using Excel functions and pivot tables.</p>
+
+                <a href="https://github.com/akhilanm123/Bank-Loan-Analysis--Excel" class="btn" target="_blank">View Project</a>
+
+            </div>
+
+            <div class="project-box">
+
+                <h3>Ferns N Petals Sales Analysis (Excel)</h3>
+
+                <p>Evaluated sales performance for Ferns N Petals using Excel.</p>
+
+                <a href="https://github.com/akhilanm123/Ferns-N-Petals-Sales-Analysis" class="btn" target="_blank">View Project</a>
+
+            </div>
+
+            <div class="project-box">
+
+                <h3>Coffee Sales (Excel)</h3>
+
+                <p>Designed an Excel dashboard to track coffee sales trends.</p>
+
+                <a href="https://github.com/akhilanm123/Coffee-Sales-Using-Excel" class="btn" target="_blank">View Project</a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+</body>
+
+</html>
+
+
+

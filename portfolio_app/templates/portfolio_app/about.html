@@ -1,0 +1,237 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me</title>
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+    <style>
+        /* General Styling */
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(to right, #eef2f3, #8e9eab);
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Navigation Bar */
+        .navbar {
+            background: black;
+            padding: 15px 0;
+            text-align: center;
+        }
+        .navbar a {
+            color: white;
+            font-weight: bold;
+            text-decoration: none;
+            padding: 12px 20px;
+            display: inline-block;
+            transition: 0.3s ease;
+        }
+        .navbar a:hover {
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 5px;
+        }
+
+        /* Container */
+        .container {
+            max-width: 900px;
+            margin: auto;
+            padding: 20px;
+        }
+
+        /* Box Styling */
+        .box {
+            background: white;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+            transition: transform 0.3s ease;
+        }
+        .box:hover {
+            transform: translateY(-5px);
+        }
+
+        /* Profile Section */
+        .profile-box {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+        .profile-photo {
+            width: 145px;
+            height: 155px;
+            border-radius: 50%;
+            overflow: hidden;
+            border: 1px solid ;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+        }
+        .profile-photo img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 50%;
+        }
+        .intro-text {
+            flex: 1;
+            font-size: 17px;
+            color: #333;
+            line-height: 1.5;
+        }
+        .name-highlight {
+            font-size: 22px;
+            font-weight: bold;
+            color: #4169E1;
+        }
+
+        /* Section Titles */
+        .box-title {
+            font-size: 20px;
+            font-weight: bold;
+            color: white;
+            background: linear-gradient(90deg, #007bff, #0056b3);
+            padding: 12px;
+            border-radius: 5px;
+            text-align: center;
+        }
+
+        /* Inner Box */
+        .inner-box {
+            background: #e9f5ff;
+            padding: 15px;
+            border-radius: 5px;
+            margin-top: 10px;
+        }
+
+        /* List Styling */
+        ul {
+            padding-left: 18px;
+        }
+        li {
+            margin-bottom: 8px;
+            line-height: 1.4;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <a href="{% url 'home' %}">Home</a>
+        <a href="{% url 'projects' %}">Projects</a>
+        <a href="{% url 'skills' %}">Skills</a>
+        <a href="{% url 'contact' %}">Contact</a>
+    </nav>
+
+    <div class="container">
+
+        <!-- Profile Section -->
+        <div class="box">
+            <h2 class="box-title">About</h2>
+            <div class="profile-box">
+                <div class="profile-photo">
+                    <img src="{% static 'images/profile.jpg' %}" alt="Profile Photo">
+                </div>
+                <div class="intro-text">
+                    <p class="name-highlight">Hi, I'm Akhila NM!</p>
+                    <p>From optimizing sales performance to uncovering data-driven strategies, I bring 2.6 years of analytical experience to the world of data. Proficient in SQL, Python, Power BI, and Tableau, I transform raw data into actionable insights that drive business growth. My expertise in data analysis and visualization empowers businesses to make informed decisions. I'm ready to apply my skills to help you achieve your strategic objectives.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Education -->
+        <div class="box">
+            <h2 class="box-title">Education</h2>
+            <div class="inner-box">
+                <p><strong>Bachelor of Technology in Electronics and Communication Engineering</strong></p>
+                <p>Government Engineering College, Kozhikode, Kerala | Aug 2016 - Sep 2020</p>
+            </div>
+        </div>
+
+        <!-- Certifications -->
+        <div class="box">
+            <h2 class="box-title">Certifications</h2>
+            <div class="inner-box">
+                <ul>
+                    <li><strong>Google Data Analytics Professional Certificate</strong> – SQL & Visualization (May 2024)</li>
+                    <li><strong>Excel with AI</strong> – Automation & AI-Driven Analysis (Dec 2024)</li>
+                    <li><strong>Google Prompting Essentials</strong> – AI Prompting & Automation (Dec 2024)</li>
+                    <li><strong>Statistics & Mathematics for Data Science & Data Analytics</strong> (Udemy, Oct 2024)</li>
+                    <li><strong>Power BI</strong> – Advanced Power BI & Data Visualization (Simplilearn, Jul 2024)</li>
+                    <li><strong>Complete SQL Masterclass</strong> – PostgreSQL & Advanced Queries (Udemy, Jun 2024)</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Work Experience -->
+       <div class="box work-experience-box">
+    <h2 class="box-title">Work Experience</h2>
+
+    <div class="inner-box">
+        <p><strong>Area Sales Manager</strong> – Extramarks Education India Pvt Ltd</p>
+        <p>Jun 2023 - Jan 2024</p>
+        <ul>
+            <li>Leveraged data-driven insights to analyze market segment data, improving sales conversion rates by 15%.</li>
+            <li>Orchestrated 15 product demonstration workshops, driving a 40% increase in lead generation.</li>
+            <li>Restructured sales data to identify onboarding bottlenecks, reducing onboarding time by 2 weeks.</li>
+            <li>Developed standardized sales process SOPs, reducing representatives' ramp-up time by 30%.</li>
+        </ul>
+    </div>
+
+    <div class="inner-box">
+        <p><strong>Senior Business Development Associate</strong> – BYJU'S</p>
+        <p>Sep 2020 - Oct 2022</p>
+        <ul>
+            <li>Drove a 25% increase in team revenue by applying data analytics (Excel) to optimize strategy.</li>
+            <li>Increased customer engagement by 15% through loyalty program restructuring.</li>
+            <li>Led a team of six associates, achieving a 90% satisfaction rate on internal mentorship surveys.</li>
+            <li>Streamlined customer onboarding, reducing support ticket resolution time by 2 hours.</li>
+        </ul>
+    </div>
+</div>
+
+<div class="box virtual-internships-box">
+    <h2 class="box-title">Virtual Internships</h2>
+
+    <div class="inner-box">
+        <p><strong>Accenture Data Analytics Virtual Experience</strong></p>
+        <p>Forage | 2024</p>
+        <ul>
+            <li>Optimized data cleansing and transformation processes to enhance reporting accuracy.</li>
+            <li>Developed interactive Power BI dashboards for key business insights and client reporting.</li>
+            <li>Implemented SQL queries to extract, manipulate, and analyze datasets for trend identification.</li>
+        </ul>
+    </div>
+
+    <div class="inner-box">
+        <p><strong>Goldman Sachs Risk & Financial Analysis Internship</strong></p>
+        <p>Forage | 2024</p>
+        <ul>
+            <li>Conducted financial data analysis to assess risks and predict market trends.</li>
+            <li>Leveraged Excel and SQL to generate data-driven insights for investment decision-making.</li>
+            <li>Designed interactive dashboards to visualize financial risk assessments and key metrics.</li>
+        </ul>
+    </div>
+
+    <div class="inner-box">
+        <p><strong>PwC Data Visualization & Business Intelligence Internship</strong></p>
+        <p>Forage | 2024</p>
+        <ul>
+            <li>Developed Power BI dashboards to monitor key business performance indicators.</li>
+            <li>Utilized SQL for data extraction, transformation, and automation of reporting tasks.</li>
+            <li>Applied data storytelling techniques to present business insights for decision-making.</li>
+        </ul>
+    </div>
+
+    <div class="inner-box">
+        <p><strong>TATA Data-Driven Decision Making Internship</strong></p>
+        <p>Forage | 2024</p>
+        <ul>
+            <li>Analyzed large datasets using SQL and Excel to uncover cost-saving opportunities.</li>
+            <li>Performed statistical analysis for business forecasting and trend predictions.</li>
+            <li>Designed Power BI reports to enable real-time monitoring of business performance.</li>
+        </ul>
+    </div>
+</div>

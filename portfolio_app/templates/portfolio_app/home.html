@@ -1,0 +1,120 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - Portfolio</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Poppins', sans-serif;
+            background: url("{% static 'images/background.jpg' %}") no-repeat center center fixed;
+            background-size: cover;
+            color: #FFD700;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .hero-section {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background: none;
+            padding: 50px;
+            border-radius: 15px;
+        }
+
+        .title {
+            font-size: 5rem;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        .description {
+    font-size: 2rem;
+    font-style: italic;
+    font-weight: bold;
+    color: white;
+    margin: 0; /* Remove extra margins */
+    text-align: center;
+    white-space: nowrap; /* Prevents text from wrapping */
+}
+        .description-box {
+    background:  #002366; /* Dark semi-transparent background */
+    padding: 5px 10px;;
+    border-radius: 10px;
+    display: inline-block;
+    max-width: fit-content;
+}
+
+        /* Top-right Navigation */
+        .top-navigation {
+            position: absolute;
+            top: 20px;
+            right: 30px;
+        }
+
+        .top-navigation a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 15px;
+            font-size: 1rem;
+            display: inline-block;
+        }
+
+        .top-navigation a:hover {
+            background-color: #A9A9A9;
+            border-radius: 5px;
+        }
+
+        /* Centered About Link */
+        .about-link {
+            margin-top: 20px;
+        }
+
+               .about-link a {
+            background-color: #FF8C00; /* Dark Orange */
+            color: black; /* White Text */
+            text-decoration: none;
+            font-size: 1rem; /* Reduced size */
+            font-weight: bold;
+            display: inline-block;
+            padding: 10px 20px;
+            border-radius: 5px;
+        }
+
+        .about-link a:hover {
+            background-color: #FF4500; /* Slightly Darker Orange on Hover */
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Top-right Navigation -->
+    <div class="top-navigation">
+        <a href="{% url 'projects' %}">Projects</a>
+        <a href="{% url 'skills' %}">Skills</a>
+        <a href="{% url 'contact' %}">Contact</a>
+    </div>
+
+    <div class="hero-section">
+        <h1 class="title">HI! I'M AKHILA</h1>
+        <div class="description-box">
+        <p class="description">Data Analyst skilled in Python, SQL, Power BI, Tableau, and Data Visualization</p>
+        </div>
+
+        <!-- Centered About link below description -->
+        <div class="about-link">
+            <a href="{% url 'about' %}">About</a>
+        </div>
+    </div>
+
+</body>
+</html>
