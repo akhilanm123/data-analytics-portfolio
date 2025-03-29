@@ -8,19 +8,20 @@
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
 
     <style>
-        body {
-          body {
-        margin: 0;
-        padding: 0;
-        font-family: 'Poppins', sans-serif;
-        background: linear-gradient(to right, #E3F2FD, #FFFFFF);
-        color: #333; /* Changed for better readability */
-        text-align: center;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 100vh;
-        }
+   body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    background: url("{% static 'images/new-background.jpg' %}") no-repeat center center fixed;
+    background-size: cover;
+    color: #333; /* Adjust text color if needed */
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
 
         .hero-section {
             display: flex;
