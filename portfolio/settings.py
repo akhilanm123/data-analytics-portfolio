@@ -85,6 +85,9 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 # Use a safer storage setting
 STATICFILES_STORAGE = "whitenoise.storage.CompressedStaticFilesStorage"
 
+ALLOWED_HOSTS = ['data-analytics-portfolio-rjif.onrender.com', '127.0.0.1', 'localhost']
+
+
 
 
 
