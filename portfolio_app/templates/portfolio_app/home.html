@@ -5,100 +5,110 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home - Portfolio</title>
-    <link rel="stylesheet" href="{% static 'css/style.css' %}">
 
     <style>
-   body {
-    margin: 0;
-    padding: 0;
-    font-family: 'Poppins', sans-serif;
-   background: url("{% static 'images/bg_updated.jpg' %}") no-repeat center center fixed;
-    background-size: cover;
-    color: #333; /* Adjust text color if needed */
-    text-align: center;
+    body {
+        margin: 0;
+        padding: 0;
+        font-family: 'Poppins', sans-serif;
+        background: url("{% static 'images/background.jpg' %}") no-repeat center center fixed;
+        background-size: cover;
+        color: #333;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center; /* Keep content centered */
+        height: 100vh;
+        padding-left: 5%;
+    }
+
+    .hero-section {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
+    align-items: flex-start; /* Align content to the left */
+    margin-left: 50px;
+    padding: 50px;
+    border-radius: 15px;
+    width: 100%; /* Take full width of the screen */
 }
 
-        .hero-section {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            background: none;
-            padding: 50px;
-            border-radius: 15px;
-        }
+.title {
+    font-size: 3.5rem;
+    font-weight: bold;
+    align-items: flex-start; /* Align content to the left */
+    margin-left: 4%; /* Adjust this value to get the desired space from the left */
+    padding: 30px;
+    color: #C0C0C0 ;
+    margin-bottom: 0; /* Remove space below the title */
+    text-align: left; /* Align title to the left */
+}
 
-        .title {
-            font-size: 5rem;
-            font-weight: bold;
-            margin-bottom: 5px;
-        }
-
-        .description {
-    font-size: 2rem;
+.description {
+    font-size: 1.1rem;
     font-style: italic;
     font-weight: bold;
     color: white;
-    margin: 0; /* Remove extra margins */
-    text-align: center;
-    white-space: nowrap; /* Prevents text from wrapping */
+    margin: 0;
+    margin-top: 0; /* Set margin-top to 0 to remove space above the description */
+    text-align: left; /* Left align the description */
+    white-space: nowrap; /* Prevent text wrapping */
+    width: 100%; /* Ensure description takes full width */
+    margin-left: -50px; /* Shift description to the left (adjust as needed) */
 }
-        .description-box {
-    background:  #002366; /* Dark semi-transparent background */
-    padding: 5px 10px;;
-    border-radius: 10px;
+
+
+   /* Top-left Navigation */
+.top-navigation {
+    position: absolute;
+    top: 20px;
+    left: 25%; /* Move to the center horizontally */
+    transform: translateX(-50%); /* Shift it back by 50% of its width to perfectly center it */
+    display: flex;
+    gap: 20px; /* Space between the links */
+}
+
+/* Style for navigation links */
+.top-navigation a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+    font-size: 1rem;
     display: inline-block;
-    max-width: fit-content;
 }
 
-        /* Top-right Navigation */
-        .top-navigation {
-            position: absolute;
-            top: 20px;
-            right: 30px;
-        }
+.top-navigation a:hover {
+    background-color: #A9A9A9;
+    border-radius: 5px;
+}
 
-        .top-navigation a {
-            color: white;
-            text-decoration: none;
-            padding: 10px 15px;
-            font-size: 1rem;
-            display: inline-block;
-        }
+/* About Link Styling */
+.about-link {
+    margin-top: 20px;
+       margin-left: 17%;
+}
 
-        .top-navigation a:hover {
-            background-color: #A9A9A9;
-            border-radius: 5px;
-        }
+.about-link a {
+    background-color: #FF8C00;
+    color: black;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: bold;
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
 
-        /* Centered About Link */
-        .about-link {
-            margin-top: 20px;
-        }
+.about-link a:hover {
+    background-color: #FF4500;
+}
 
-               .about-link a {
-            background-color: #FF8C00; /* Dark Orange */
-            color: black; /* White Text */
-            text-decoration: none;
-            font-size: 1rem; /* Reduced size */
-            font-weight: bold;
-            display: inline-block;
-            padding: 10px 20px;
-            border-radius: 5px;
-        }
+</style>
 
-        .about-link a:hover {
-            background-color: #FF4500; /* Slightly Darker Orange on Hover */
-        }
-    </style>
+
 </head>
 <body>
 
-    <!-- Top-right Navigation -->
+    <!-- Top-left Navigation -->
     <div class="top-navigation">
         <a href="{% url 'projects' %}">Projects</a>
         <a href="{% url 'skills' %}">Skills</a>
@@ -106,12 +116,24 @@
     </div>
 
     <div class="hero-section">
-        <h1 class="title">HI! I'M AKHILA</h1>
+        <h1 class="title">HI, I'M AKHILA!<!doctype html>
+            <html lang="en">
+            <head>
+                <meta charset="UTF-8">
+                <meta name="viewport"
+                      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+                <meta http-equiv="X-UA-Compatible" content="ie=edge">
+                <title>Document</title>
+            </head>
+            <body>
+            
+            </body>
+            </html></h1>
         <div class="description-box">
-        <p class="description">Data Analyst skilled in Python, SQL, Power BI, Tableau, and Data Visualization</p>
+            <p class="description">Data Analyst skilled in Python, SQL, Power BI, Tableau, and Data Visualization</p>
         </div>
 
-        <!-- Centered About link below description -->
+        <!-- Left-aligned About link below description -->
         <div class="about-link">
             <a href="{% url 'about' %}">About</a>
         </div>

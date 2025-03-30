@@ -4,176 +4,165 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Skills - My Portfolio</title>
-    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <title>Skills - Portfolio</title>
+
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
     <style>
-        /* General Styles */
         body {
-            font-family: 'Arial', sans-serif;
-            background: linear-gradient(to right, #eef2f3, #8e9eab);
-            color: #333;
+            font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
+            background: linear-gradient(to right, #eef2f3, #8e9eab);
+            color: #333;
+            text-align: center;
         }
 
         /* Navigation Bar */
         .navbar {
-            background-color: black;
-            padding: 15px 0;
+            background: #2c3e50;
+            padding: 10px 0;
             text-align: center;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            left: 0;
+            z-index: 1000;
         }
         .navbar a {
             color: white;
             text-decoration: none;
-            padding: 10px 20px;
-            display: inline-block;
+            padding: 14px 20px;
             font-size: 18px;
-            font-weight: bold;
+            display: inline-block;
+            transition: background 0.3s;
         }
         .navbar a:hover {
-            background-color: #007BFF;
-            border-radius: 5px;
+            background: #34495e;
         }
 
         /* Skills Section */
-        .skills {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-            text-align: center;
-            padding: 40px 0;
-        }
+.skills-container {
+    max-width: 950px; /* Increase the container width */
+    width: 80%; /* Responsive width */
+    margin: auto;
+    margin-top: 40px;
+    padding: 40px; /* More spacing inside */
+    text-align: center;
+    background: #ffffff; /* Keep background white */
+    border-radius: 15px; /* Slightly smoother edges */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); /* More depth */
+}
+.skills-heading {
+    color: #007BFF !important; /* Royal Blue */
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+}
 
-        .skills-container {
-            background: white;
-            padding: 40px;
-            border-radius: 10px;
-            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
-            max-width: 700px;
-            width: 90%;
-        }
+.skills-category {
+    background: #f1f1f1;
+    padding: 25px; /* Increase padding */
+    margin: 15px 0; /* Better spacing */
+    cursor: pointer;
+    border-radius: 12px;
+    transition: background 0.3s, width 0.3s;
+    font-size: 22px; /* Increase font size */
+    font-weight: bold; /* Make text stand out */
+.skills-category:hover {
+    background: #e0e0e0;
+}
+}
 
-        .skills-container h2 {
-            font-size: 28px;
-            color: #333;
-            margin-bottom: 15px;
-        }
 
-        .skills-category {
-            margin-top: 20px;
-        }
+.skills-list {
+    display: none;
+    list-style: disc;
+    padding-left: 35px;
+    text-align: left;
+    font-size: 18px; /* Increase text size */
+}
 
-        .skills-category h3 {
-            font-size: 22px;
-            color: #007BFF;
-            margin-bottom: 10px;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
+.skills-list li {
+    margin: 10px 0; /* More spacing between items */
+}
 
-        .skills-list {
-            list-style-type: none;
-            padding: 0;
-            margin: 0;
-        }
-
-        .skills-list li {
-            background: #e9ecef;
-            padding: 12px;
-            margin: 6px 0;
-            border-radius: 5px;
-            font-size: 18px;
-            font-weight: 500;
-            transition: all 0.3s ease-in-out;
-        }
-
-        .skills-list li:hover {
-            background: #007BFF;
-            color: white;
-            transform: scale(1.05);
-        }
-
-        /* Buttons */
-        .skills-nav {
-            margin-top: 20px;
-        }
-
-        .skills-nav a {
-            text-decoration: none;
-            color: white;
-            background: #007BFF;
-            padding: 12px 25px;
-            border-radius: 5px;
-            font-size: 18px;
-            display: inline-block;
-            margin: 10px;
-            transition: 0.3s ease-in-out;
-        }
-
-        .skills-nav a:hover {
-            background: #0056b3;
+        /* Animation */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-5px); }
+            to { opacity: 1; transform: translateY(0); }
         }
     </style>
 </head>
 <body>
 
-<header>
-    <nav class="navbar">
+    <!-- Navigation Bar -->
+    <div class="navbar">
         <a href="{% url 'home' %}">Home</a>
         <a href="{% url 'about' %}">About</a>
         <a href="{% url 'projects' %}">Projects</a>
+        <a href="{% url 'skills' %}">Skills</a>
         <a href="{% url 'contact' %}">Contact</a>
-    </nav>
-</header>
+    </div>
 
-<section class="skills">
     <div class="skills-container">
-        <h2>Skills</h2>
+        <h1>SKILLS</h1>
 
-        <div class="skills-category">
-            <h3>Technical Skills</h3>
-            <ul class="skills-list">
-                <li>SQL (PostgreSQL, MySQL, Microsoft SQL Server, Google BigQuery)</li>
-                <li>Power BI, Tableau, Excel (Pivot Tables, Macros, VBA, Power Query)</li>
-                <li>Python (Pandas, NumPy, Matplotlib, Seaborn, Scikit-learn)</li>
-                <li>Google Sheets & Looker Studio</li>
-                <li>Data Cleaning & Preparation, Data Visualization & Storytelling</li>
-                <li>Statistical Analysis & Hypothesis Testing</li>
-                <li>Tableau</li>
-            </ul>
-        </div>
+       <div class="skills-category" onclick="toggleSkills('technical')">
+    <h2>Technical Skills <i class="fa fa-chevron-down"></i></h2>
+    <ul id="technical" class="skills-list">
+        {% for skill in skills_list %}
+            <li>{{ skill.name }}</li>
+        {% empty %}
+            <li>No skills added yet.</li>
+        {% endfor %}
+        <!-- Hardcoded Skills -->
+        <li><strong>SQL & Databases:</strong> PostgreSQL, MySQL, BigQuery, Snowflake</li>
+        <li><strong>Programming & Data Processing:</strong> Python (Pandas, NumPy, Matplotlib, Seaborn, Scikit-learn)</li>
+        <li><strong>Data Visualization & Storytelling:</strong> Power BI, Tableau, Looker Studio</li>
+        <li><strong>Data Analysis & Statistics:</strong> Data Cleaning & Preparation, Statistical Analysis, Hypothesis Testing, A/B Testing</li>
+        <li><strong>ETL & Data Management:</strong> ETL Process, Database Management</li>
+        <li><strong>Excel & Automation:</strong> Advanced Functions, AI Automation, Google Sheets</li>
+        <li><strong>Business Intelligence & Reporting:</strong> Power BI, Tableau, Looker Studio</li>
+    </ul>
+</div>
 
-        <div class="skills-category">
-            <h3>Soft Skills</h3>
-            <ul class="skills-list">
-                <li>Problem-Solving</li>
-                <li>Critical Thinking</li>
-                <li>Business Acumen</li>
+
+        <div class="skills-category" onclick="toggleSkills('soft')">
+            <h2>Soft Skills <i class="fa fa-chevron-down"></i></h2>
+            <ul id="soft" class="skills-list">
+                <li>Problem-Solving & Analytical Thinking </li>
+                <li>Business Acumen & Decision Making</li>
                 <li>Communication & Data Storytelling</li>
-                <li>Time Management</li>
-                <li>Teamwork & Adaptability</li>
+                <li>Project Management & Time Management</li>
+                <li>Stakeholder Engagement & Presentation Skills</li>
+                <li>Curiosity & Continuous Learning</li>
             </ul>
         </div>
 
-        <div class="skills-category">
-            <h3>Learning & Expanding</h3>
-            <ul class="skills-list">
-                <li>Agile Methodology & Scrum</li>
-                <li>Advanced A/B Testing</li>
-                <li>Experimentation Design</li>
-                <li>Advanced Statistical Modeling</li>
+        <div class="skills-category" onclick="toggleSkills('learning')">
+            <h2>Currently Learning <i class="fa fa-chevron-down"></i></h2>
+            <ul id="learning" class="skills-list">
                 <li>Advanced Python (OOP, Web Scraping, APIs, Automation)</li>
+                <li>Advanced Statistical Modelling</li>
+                <li>Machine Learning Basics</li>
+                <li>Cloud & Big Data Technologies (AWS, GCP, Azure)</li>
+                <li>Data Engineering Concepts (Airflow, DBT, PySpark)</li>
+                <li>Generative AI & LLMs for Business Analytics</li>
             </ul>
-        </div>
-
-        <!-- Navigation Buttons -->
-        <div class="skills-nav">
-            <a href="{% url 'projects' %}">View Projects</a>
-            <a href="{% url 'contact' %}">Get in Touch</a>
         </div>
     </div>
-</section>
+
+    <script>
+        function toggleSkills(id) {
+            var list = document.getElementById(id);
+            list.style.display = list.style.display === 'none' || list.style.display === '' ? 'block' : 'none';
+        }
+    </script>
 
 </body>
 </html>
+
+
+

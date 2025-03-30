@@ -9,5 +9,7 @@ class ProjectAdmin(admin.ModelAdmin):
 
 
 from django.contrib import admin
+from .models import Skill  # ✅ Import Skill model
 
-# Register your models here.
+admin.site.register(Skill)  # ✅ Register Skill model
+
