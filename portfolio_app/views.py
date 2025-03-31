@@ -15,7 +15,7 @@ def projects(request):
     return render(request, 'portfolio_app/projects.html', {'projects': projects})
 
 def skills(request):
-    skills_list = Skill.objects.all()  # ✅ Fetch skills from database
+    skills_list = Skill.objects.all()  # Fetch skills from database
     return render(request, 'portfolio_app/skills.html', {'skills_list': skills_list})
 
 def contact(request):

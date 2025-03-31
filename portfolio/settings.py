@@ -49,16 +49,23 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'portfolio.wsgi.application'
 
+import dj_database_url
+import os
+
+import os
+
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'portfolio_db',  # Name of your database
-        'USER': 'postgres',  # Your PostgreSQL username
-        'PASSWORD': 'new_password',  # The new password you set
-        'HOST': 'localhost',  # Change if your PostgreSQL server is hosted remotely
-        'PORT': '5432',  # Default PostgreSQL port
+        'NAME': 'portfolio_db_f9t0',  # Database name
+        'USER': 'portfolio_db_f9t0_user',
+        'PASSWORD': 'e0EXHeaZIwaXPHRY0JNeO8Cuhma0oGeP',
+        'HOST': 'dpg-cvkvpvc9c44c73f91hag-a.oregon-postgres.render.com',
+        'PORT': '5432',
     }
 }
+
+
 
 
 AUTH_PASSWORD_VALIDATORS = [
@@ -84,6 +91,8 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 # Use a safer storage setting
 STATICFILES_STORAGE = "whitenoise.storage.CompressedStaticFilesStorage"
+
+DEBUG = True  # Or set it to True temporarily for testing
 
 ALLOWED_HOSTS = ['data-analytics-portfolio-rjif.onrender.com', '127.0.0.1', 'localhost']
 
